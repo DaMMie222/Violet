@@ -94,15 +94,15 @@ export default class MessageHandler {
 		   );
 		   if (M.quoted?.sender) M.mentioned.push(M.quoted.sender);
 			if (!command)
-			return void M.reply( await request.buffer(`https://c.tenor.com/7ZzPY3wgX_4AAAPo/zero-two-002.mp4`),
+			return void M.reply( await request.buffer(`https://c.tenor.com/fLKkMv91TpIAAAPo/violet-evergarden-anime.mp4`),
                     MessageType.video,
                     Mimetype.gif,
                     undefined,
-                    `*${M.sender.username}* Darling you are using wrong command. Please type *${this.client.config.prefix}help* to know my commands.`,
+                    `*${M.sender.username}* Dear you are using wrong command. Please type *${this.client.config.prefix}help* to know my commands.`,
                     undefined
                 )
 		const user = await this.client.getUser(M.sender.jid);
-		if (user.ban) return void M.reply("You're Banned from using commands.");
+		if (user.ban) return void M.reply("Oh dear, you're Banned from using commands.");
 		const state = await this.client.DB.disabledcommands.findOne({
 			command: command.config.command,
 		});
@@ -113,16 +113,16 @@ export default class MessageHandler {
 				}`
 			);
 		if (!command.config?.dm && M.chat === "dm")
-			return void M.reply("Darling this command can only be used in groups.");
+			return void M.reply("Oh dear, this command can only be used in groups.");
 		if (
 			command.config?.modsOnly &&
 			!this.client.config.mods?.includes(M.sender.jid)
 		) {
-			return void M.reply(`Darling only MODS are allowed to use this command.`);
+			return void M.reply(`Oh dear, only MODS are allowed to use this command.`);
 		}
 		if (command.config?.adminOnly && !M.sender.isAdmin)
 			return void M.reply(
-				`Darling this command is only made for the group admins, Baka!`
+				`Oh dear, this command is only made for the group admins`
 			);
 		try {
 			await command.run(M, this.parseArgs(args));
