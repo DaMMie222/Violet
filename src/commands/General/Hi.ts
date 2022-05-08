@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		const chitoge =
-			"https://c.tenor.com/KqyGziKFp6wAAAPo/zero-two-live-wallpaper.mp4";
+			"https://c.tenor.com/L6TYbITAZGkAAAPo/violet-evergarden-anime.mp4";
 		return void this.client.sendMessage(
 			M.from,
 			{ url: chitoge },
@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `Hi, i am  *Zero Two*📍. Developed by: *Fantox*. I don't have time for chit-chat Darling. Use command from *${this.client.config.prefix}help* list if you want me to do anything. \n`,
+				caption: `Hi, i am  *Violet* 💞. A WhatsApp bot developed by: *Fantox*. It is a pleasure to meet you. If it is your wish, I will travel anywhere to meet your request. Auto Memory Doll, Violet Evergarden, at your service. Use command from *${this.client.config.prefix}help* list if you want me to do anything. \n`,
 			}
 		);
 	};
