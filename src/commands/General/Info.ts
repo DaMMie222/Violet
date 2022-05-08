@@ -38,9 +38,9 @@ export default class Command extends BaseCommand {
             MessageType.video,
             Mimetype.gif,
             undefined,
-            `『 𝕍𝕚𝕠𝕝𝕖𝕥 』\n\n🔮 *Total Groups: ${
+            `『 𝕍𝕚𝕠𝕝𝕖𝕥 』\n\n📲 *Total Groups: ${
 				chats.length
-					}*\n\n💞 *Last Re-booted: ${uptime()}*\n\n💞 *My cute people: ${users}*\n\n💢 *Banned Users: ${uban}*\n\n\n  *Developer: Fantox*\n\n`,
+					}*\n\n💞 *Last Re-booted: ${uptime()}*\n\n💞 *My Total Users: ${users}*\n\n💢 *Banned Users: ${uban}*\n\n\n  *Developer: Fantox*\n\n`,
                     undefined
                 ).catch((reason: any) =>
             M.reply(`✖ An error occurred. Please try again later.`))	
