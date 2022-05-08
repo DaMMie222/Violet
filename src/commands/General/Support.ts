@@ -28,7 +28,7 @@ export default class Command extends BaseCommand {
         let beckylynch = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url:beckylynch }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
-            caption: `I sent you the support Link in personal message. Pls check.\n` }
+            caption: `I sent you the Support Group Link in personal message. Pls check.\n` }
         )
 
         }
