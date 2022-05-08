@@ -9,7 +9,7 @@ import { ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
 		super(client, handler, {
-			command: "zerotwo",
+			command: "violet",
 			description: "Displays the info",
 			category: "general",
 			usage: `${client.config.prefix}yotsuba`,
@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		const chitoge =
-			"https://c.tenor.com/z6GMGNV3teMAAAPo/darling-in-the-franxx-zero-two.mp4";
+			"https://c.tenor.com/T9RtbdMBUOgAAAPo/violet-evergarden.mp4";
 		return void this.client.sendMessage(
 			M.from,
 			{ url: chitoge },
@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `📍 *Zero Two* 📍\n\n🍀 *Description: A WhatsApp Bot With advanced features developed and hosted by Fantox.*\n\n🌐 *Fantox's GitHub URL: https://github.com/FantoX001* \n\n  👾 *Zero Two's URL:https://github.com/FantoX001/Zero-Two* \n\n 📒  *Guide: https://github.com/FantoX001/Zero-Two-Guides* \n\n`,
+				caption: `💞 *Violet* 💞\n\n🍀 *Description: A WhatsApp Bot With advanced features developed and hosted by Fantox.*\n\n🌐 *Fantox's GitHub URL: https://github.com/FantoX001* \n\n  👾 *Zero Two's URL: https://github.com/FantoX001/Violet* \n\n 📒 *Guide: https://github.com/FantoX001/Violet-Guides* \n\n`,
 			}
 		);
 	};
